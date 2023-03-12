@@ -10,6 +10,7 @@ namespace EmployeeWage
             Employee employee = new Employee();
             employee.attendance();
             employee.Calculate();
+            employee.PartTimeWage();
         }
     }
 }
