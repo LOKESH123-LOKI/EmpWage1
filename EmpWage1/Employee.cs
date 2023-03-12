@@ -32,14 +32,14 @@ namespace EmpWage1
             int salary = 0;
             Random random = new Random();
             int variable=random.Next(0, 2);
-            if (variable == IS_FULLTIME)
+            switch (variable)
             {
-                salary=WagePerHour * DailyHours;
-            }
-            else
-                if (variable == IS_HALFTIME)
-            {
-                salary=WagePerHour /2* DailyHours;
+                case IS_FULLTIME:
+                    salary = WagePerHour * DailyHours;
+                    break;
+                case IS_HALFTIME:
+                    salary = WagePerHour / 2 * DailyHours;
+                    break;
             }
             Console.WriteLine("salary is" + salary);
         }
