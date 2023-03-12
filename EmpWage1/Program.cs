@@ -11,6 +11,7 @@ namespace EmployeeWage
             employee.attendance();
             employee.Calculate();
             employee.PartTimeWage();
+            
         }
     }
 }

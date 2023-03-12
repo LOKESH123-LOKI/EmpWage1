@@ -8,7 +8,7 @@ namespace EmpWage1
 {
     public class Employee
     {
-        const int IS_FULLTIME = 1, WagePerHour = 20, DailyHours = 8, PartTimeHours = 8, IS_HALFTIME = 2;
+        const int IS_FULLTIME = 1, WagePerHour = 20, DailyHours = 8, PartTimeHours = 8, IS_HALFTIME = 2, WagesForMonth = 20;
         public void attendance()
         {
             Random random = new Random();
@@ -29,20 +29,23 @@ namespace EmpWage1
         }
         public void PartTimeWage()
         {
-            int salary = 0;
-            Random random = new Random();
-            int variable=random.Next(0, 2);
-            switch (variable)
+            int totalsalary = 0,NumOfWorkingDays = 2;
+            for (int day = 0; day <NumOfWorkingDays ; day++)
             {
-                case IS_FULLTIME:
-                    salary = WagePerHour * DailyHours;
-                    break;
-                case IS_HALFTIME:
-                    salary = WagePerHour / 2 * DailyHours;
-                    break;
+                Random random = new Random();
+                int variable = random.Next(0, 2);
+                switch (variable)
+                {
+                    case IS_FULLTIME:
+                        totalsalary = WagePerHour * DailyHours;
+                        break;
+                    case IS_HALFTIME:
+                        totalsalary = WagePerHour / 2 * DailyHours;
+                        break;
+                }
+                Console.WriteLine("salary is" + totalsalary);
             }
-            Console.WriteLine("salary is" + salary);
-        }
 
+        }
     }
 }
