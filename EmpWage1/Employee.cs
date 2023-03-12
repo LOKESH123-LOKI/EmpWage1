@@ -29,8 +29,8 @@ namespace EmpWage1
         }
         public void PartTimeWage()
         {
-            int totalsalary = 0,NumOfWorkingDays = 2;
-            for (int day = 0; day <NumOfWorkingDays ; day++)
+            int totalsalary = 0, NumOfWorkingDays = 2, DailyHours = 100;
+            for (int day = 0; day <NumOfWorkingDays &&(DailyHours>100) ; day++)
             {
                 Random random = new Random();
                 int variable = random.Next(0, 2);
